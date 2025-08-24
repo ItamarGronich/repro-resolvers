@@ -7,11 +7,11 @@ const execAsync = promisify(exec);
 
 const packageManager = {
   getPackageManagerDetails: async () => ({
-    name: "npm",
-    version: (await runCommand("npm --version")).stdout.trim(),
+    name: "yarn",
+    version: (await runCommand("yarn --version")).stdout.trim(),
   }),
-  install: () => runCommand("npm ci"),
-  build: () => runCommand("npm run build"),
+  install: () => runCommand("yarn install --immutable"),
+  build: () => runCommand("yarn run build"),
 };
 
 async function runCommand(cmd) {
