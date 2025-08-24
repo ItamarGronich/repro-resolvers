@@ -7,11 +7,11 @@ const execAsync = promisify(exec);
 
 const packageManager = {
   getPackageManagerDetails: async () => ({
-    name: "npm",
-    version: (await runCommand("npm --version")).stdout.trim(),
+    name: "pnpm",
+    version: (await runCommand("pnpm --version")).stdout.trim(),
   }),
-  install: () => runCommand("npm ci"),
-  build: () => runCommand("npm run build"),
+  install: () => runCommand("pnpm i --frozen-lockfile"),
+  build: () => runCommand("pnpm build"),
 };
 
 async function runCommand(cmd) {
