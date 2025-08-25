@@ -35,6 +35,7 @@ const RAW_RUNTIME_STATE =
           ["react-dom", "virtual:fc88294f941dc3aec21b7e3b668f3b5c044b0ed70c43fd55363eed94a8f944edb018decfdadca4d3097537e8d7e3ef4f26884d22fbd46114d4c0a34be2cec240#npm:19.1.1"],\
           ["react-hook-form", "virtual:fc88294f941dc3aec21b7e3b668f3b5c044b0ed70c43fd55363eed94a8f944edb018decfdadca4d3097537e8d7e3ef4f26884d22fbd46114d4c0a34be2cec240#npm:7.62.0"],\
           ["repro-resolvers", "workspace:."],\
+          ["typescript", "patch:typescript@npm%3A5.9.2#optional!builtin<compat/typescript>::version=5.9.2&hash=5786d5"],\
           ["zod", "npm:3.24.4"]\
         ],\
         "linkType": "SOFT"\
@@ -519,6 +520,7 @@ const RAW_RUNTIME_STATE =
           ["react-dom", "virtual:fc88294f941dc3aec21b7e3b668f3b5c044b0ed70c43fd55363eed94a8f944edb018decfdadca4d3097537e8d7e3ef4f26884d22fbd46114d4c0a34be2cec240#npm:19.1.1"],\
           ["react-hook-form", "virtual:fc88294f941dc3aec21b7e3b668f3b5c044b0ed70c43fd55363eed94a8f944edb018decfdadca4d3097537e8d7e3ef4f26884d22fbd46114d4c0a34be2cec240#npm:7.62.0"],\
           ["repro-resolvers", "workspace:."],\
+          ["typescript", "patch:typescript@npm%3A5.9.2#optional!builtin<compat/typescript>::version=5.9.2&hash=5786d5"],\
           ["zod", "npm:3.24.4"]\
         ],\
         "linkType": "SOFT"\
@@ -547,6 +549,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../.yarn/berry/cache/tslib-npm-2.8.1-66590b21b8-10c0.zip/node_modules/tslib/",\
         "packageDependencies": [\
           ["tslib", "npm:2.8.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["typescript", [\
+      ["patch:typescript@npm%3A5.9.2#optional!builtin<compat/typescript>::version=5.9.2&hash=5786d5", {\
+        "packageLocation": "../../../.yarn/berry/cache/typescript-patch-bcfe2ebaf8-10c0.zip/node_modules/typescript/",\
+        "packageDependencies": [\
+          ["typescript", "patch:typescript@npm%3A5.9.2#optional!builtin<compat/typescript>::version=5.9.2&hash=5786d5"]\
         ],\
         "linkType": "HARD"\
       }]\
