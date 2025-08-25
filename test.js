@@ -8,7 +8,7 @@ const execAsync = promisify(exec);
 const packageManager = {
   getPackageManagerDetails: async () => ({
     name: "npm",
-    version: (await runCommand("npm --version")).stdout,
+    version: (await runCommand("npm --version")).stdout.trim(),
   }),
   install: () => runCommand("npm ci"),
   build: () => runCommand("npm run build"),
