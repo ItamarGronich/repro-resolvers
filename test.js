@@ -6,7 +6,10 @@ import { promisify } from "node:util";
 const execAsync = promisify(exec);
 
 const packageManager = {
-  name: "npm",
+  getPackageManagerDetails: async () => ({
+    name: "npm",
+    version: (await runCommand("npm --version")).stdout,
+  }),
   install: () => runCommand("npm ci"),
   build: () => runCommand("npm run build"),
 };
@@ -49,7 +52,8 @@ async function build() {
 }
 
 async function test() {
-  log(`testing package manager: ${packageManager.name}`);
+  const { name, version } = await packageManager.getPackageManagerDetails();
+  log(`testing package manager: ${name}@${version}`);
   await clean();
   await install();
   await build();
