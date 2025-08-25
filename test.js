@@ -33,6 +33,7 @@ async function clean() {
   log("cleaning...");
   await Promise.all([
     rm(join(process.cwd(), "dist"), { recursive: true, force: true }),
+    rm(join(process.cwd(), ".yarn"), { recursive: true, force: true }),
     rm(join(process.cwd(), "node_modules"), { recursive: true, force: true }),
   ]);
 }
